@@ -5,7 +5,13 @@ export interface BackgrooundImageProps {
   url: string;
 }
 
-export const Main = styled.main``;
+export const Main = styled.main`
+  h3 {
+    background-color: #f5db13;
+    padding:8px;
+    font-size:24px;
+  }
+`;
 
 export const Content = styled.div`
   box-sizing: border-box;
@@ -34,7 +40,7 @@ export const Header = styled.header`
   justify-content: space-between;
   margin-bottom: 32px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 915px) {
     flex-direction: column;
     gap: 24px;
   }
@@ -46,10 +52,11 @@ export const Header = styled.header`
     padding: 8px;
     width: 50%;
     max-height: 48px;
+    margin-right: 16px;
 
     box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
 
-    @media (max-width: 768px) {
+    @media (max-width: 915px) {
       width: 100%;
     }
 
@@ -76,12 +83,15 @@ export const Header = styled.header`
 
 export const FormControlStyled = styled(FormControl)`
   width: 300px;
-  border-radius: 48px;
+  border-radius: 10px;
 
   box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
 
   * {
     border: none !important;
+  }
+  @media (max-width: 915px) {
+    flex: 1;
   }
 `;
 
@@ -97,9 +107,13 @@ export const Card = styled.div`
 
   background-color: #f6f7f9;
 
-  @media (max-width: 768px) {
-    width: 260px;
+  @media (max-width: 915px) {
+    width: 320px;
     height: 140px;
+  }
+  @media (max-width: 795px) {
+    width: 90%;
+    height: 180px;
   }
 `;
 

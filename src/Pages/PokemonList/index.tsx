@@ -99,7 +99,7 @@ export function PokemonList() {
   }
   return (
     <Main>
-      <h1>Listagem</h1>
+      <h3>MandaPoke</h3>
       <Content>
         <Header>
           <div className="search">
