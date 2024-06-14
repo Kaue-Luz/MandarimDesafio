@@ -1,8 +1,9 @@
+import { Category } from "../Styles/categoryColors";
 import { api } from "./api";
 
 export interface Pokemon {
   background_image_url: string;
-  category: string;
+  category: Category;
   created_at: Date;
   id: number;
   image_url: string;
