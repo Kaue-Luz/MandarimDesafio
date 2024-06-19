@@ -106,6 +106,7 @@ export const Card = styled.div`
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
 
   background-color: #f6f7f9;
+  cursor: pointer;
 
   @media (max-width: 915px) {
     width: 320px;

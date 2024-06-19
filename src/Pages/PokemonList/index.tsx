@@ -22,6 +22,7 @@ import {
 import { Category, categoriesColors } from "../../Styles/categoryColors";
 import { MagnifyingGlass } from "phosphor-react";
 import OpenPokeball from "../../Assets/dontFind.png";
+import { Loader } from "../../Components/Loader";
 
 type OrderByOptions = "asc" | "desc";
 
@@ -95,7 +96,7 @@ export function PokemonList() {
   }, [searchPokemon]);
 
   if (isLoading) {
-    return <h1>loading</h1>;
+    return <Loader />;
   }
   return (
     <Main>
@@ -171,9 +172,9 @@ export function PokemonList() {
         <section>
           {!orderedData.length ? (
             <DontFindPokemon>
-              <h1>NÃO ENCONTRAMOS SEU POKEMON</h1>
-              <img src={OpenPokeball} alt="Pokebola aberta" />
-            </DontFindPokemon>
+            <h1>NÃO ENCONTRAMOS SEU POKEMON</h1>
+            <img src={OpenPokeball} alt="Pokebola aberta" />
+          </DontFindPokemon>
           ) : (
             orderedData.map((data) => (
               <Card

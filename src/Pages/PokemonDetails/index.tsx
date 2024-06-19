@@ -5,6 +5,7 @@ import { DontFindPokemon } from "../PokemonList/styles";
 import OpenPokeball from "../../Assets/dontFind.png";
 import { SmileySad } from "phosphor-react";
 import { BackgrooundImage, HomeButton, Main } from "./styles";
+import { Loader } from "../../Components/Loader";
 
 export function PokemonDetails() {
   const { name } = useParams();
@@ -24,7 +25,7 @@ export function PokemonDetails() {
   }, [name]);
 
   if (isLoading) {
-    return <h1>loading</h1>;
+    return <Loader />;
   }
   return (
     <Main>
